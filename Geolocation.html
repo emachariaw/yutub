@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, 
+        intial-scale=1.0">
+        <title>Geolocation App</title>
+    </head>
+    <body>
+        <h1>HTML5 Geolocation</h1>
+        <p id="demo">
+            Click Button to get your coordinates
+        </p>
+        <button onclick="getlocation()"> Get Location</button>
+        <script>
+            function getlocation(){
+                if (navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showposition);}
+                    else {
+                        document.getElementById('demo').innerHTML ='latitude: ' 
+                        + position.coords.latitude +'<br>Longitude:' + position.coords.latitude;
+                    }
+                }
+        </script>
+    </body>
+</html>
